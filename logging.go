@@ -13,6 +13,8 @@ import (
 	"github.com/tidwall/sjson"
 )
 
+var _ http.RoundTripper = &LoggingRoundTripper{}
+
 type LoggingRoundTripper struct {
 	MaskFields []string
 }
